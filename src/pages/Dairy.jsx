@@ -6,7 +6,7 @@ const Dairy = () => {
   return (
     <div className="pt-20">
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/dairy1.jpg" alt="Dairy Banner" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/dairy1.jpg" alt="Dairy Banner" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -57,7 +57,7 @@ const Dairy = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <img src="/src/images/dairy-cow.jpg" alt="Dairy" className="w-full h-96 object-cover border border-gray-200" />
+              <img src="/images/dairy-cow.jpg" alt="Dairy" className="w-full h-96 object-cover border border-gray-200" />
             </motion.div>
           </div>
         </div>
@@ -69,12 +69,12 @@ const Dairy = () => {
           <h3 className="text-3xl font-bold text-gray-900 mb-8 font-display">Dairy Gallery</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[ 
-              '/src/images/dairy1.jpg',
-              '/src/images/dairy2.jpg',
-              '/src/images/dairy3.jpg',
-              '/src/images/dairy4.jpg',
-              '/src/images/dairy-cow.jpg',
-              '/src/images/yoghurt.jpg'
+              '/images/dairy1.jpg',
+              '/images/dairy2.jpg',
+              '/images/dairy3.jpg',
+              '/images/dairy4.jpg',
+              '/images/dairy-cow.jpg',
+              '/images/yoghurt.jpg'
             ].map((src) => (
               <div key={src} className="group aspect-[4/3] overflow-hidden border border-gray-200">
                 <img src={src} alt="Dairy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

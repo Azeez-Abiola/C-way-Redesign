@@ -26,30 +26,30 @@ const Home = () => {
       title: 'CWAY Water',
       description: 'Industry leader since 2000. Providing clean, hygienic water and innovative water dispensers.',
       link: '/brands/water',
-      image: '/src/images/cway-water-image to use1.png'
+      image: '/images/cway-water-image to use1.png'
     },
     {
       icon: FaGlassWater,
       title: 'CWAY Food & Beverages',
       description: 'Since 2004, offering premium beverages including fruit milk, yogurt drinks, energy drinks, and more.',
       link: '/brands/beverages',
-      image: '/src/images/beverages2.jpg'
+      image: '/images/beverages2.jpg'
     },
     {
       icon: FaCookie,
       title: 'Snacks & More',
       description: 'Diversified product portfolio including snacks under the Wellcome brand.',
       link: '/brands/snacks',
-      image: '/src/images/snacks1.jpg'
+      image: '/images/snacks1.jpg'
     }
   ]
 
   const heroImages = [
-    '/src/images/cway-building.jpg',
-    '/src/images/cway-headquarters.jpg',
-    '/src/images/Headquarters1.jpg',
-    '/src/images/cway-team.jpg',
-    '/src/images/truck.jpg'
+    '/images/cway-building.jpg',
+    '/images/cway-headquarters.jpg',
+    '/images/Headquarters1.jpg',
+    '/images/cway-team.jpg',
+    '/images/truck.jpg'
   ]
 
   const [activeIdx, setActiveIdx] = useState(0)

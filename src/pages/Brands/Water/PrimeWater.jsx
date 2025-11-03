@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const PrimeWater = () => {
-  const primeImages = ['/src/images/cwayprime-water-image to use1.jpg', '/src/images/cwayprime-water-image to use2.png', '/src/images/cwayprime-water-image to use3.png']
+  const primeImages = ['/images/cwayprime-water-image to use1.jpg', '/images/cwayprime-water-image to use2.png', '/images/cwayprime-water-image to use3.png']
   const [heroIdx, setHeroIdx] = useState(0)
   useEffect(() => {
     const id = setInterval(() => setHeroIdx(p => (p + 1) % primeImages.length), 4500)
@@ -46,7 +46,7 @@ const PrimeWater = () => {
               <p className="text-gray-700">Aesthetic PC bottles.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4">
-              <img src="/src/images/cwayprime-water-image to use1.jpg" alt="PRIME Refill" className="w-full h-[360px] object-contain" />
+              <img src="/images/cwayprime-water-image to use1.jpg" alt="PRIME Refill" className="w-full h-[360px] object-contain" />
             </motion.div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const PrimeWater = () => {
               <p className="text-gray-700">Available in packs of 12 bottles.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4">
-              <img src="/src/images/cwayprime-water-image to use2.png" alt="Prime Table Water" className="w-full h-[360px] object-contain" />
+              <img src="/images/cwayprime-water-image to use2.png" alt="Prime Table Water" className="w-full h-[360px] object-contain" />
             </motion.div>
           </div>
         </div>
@@ -94,7 +94,7 @@ const PrimeWater = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4 order-1 lg:order-2">
-              <img src="/src/images/cwayprime-water-image to use3.png" alt="Prime Range" className="w-full h-[360px] object-contain" />
+              <img src="/images/cwayprime-water-image to use3.png" alt="Prime Range" className="w-full h-[360px] object-contain" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">Choose the Water You Can Trust</h3>

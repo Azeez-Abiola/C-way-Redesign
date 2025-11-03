@@ -6,14 +6,14 @@ const Beverages = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const beverageImages = useMemo(() => ([
-    '/src/images/beverage1.jpg',
-    '/src/images/beverage2.jpg',
-    '/src/images/beverage3.jpg',
-    '/src/images/beverage4.jpg',
-    '/src/images/beverage5.jpg',
-    '/src/images/beverages2.jpg',
-    '/src/images/yoghurt.jpg',
-    '/src/images/energy-drink.jpg'
+    '/images/beverage1.jpg',
+    '/images/beverage2.jpg',
+    '/images/beverage3.jpg',
+    '/images/beverage4.jpg',
+    '/images/beverage5.jpg',
+    '/images/beverages2.jpg',
+    '/images/yoghurt.jpg',
+    '/images/energy-drink.jpg'
   ]), [])
 
   const [activeIdx, setActiveIdx] = useState(0)

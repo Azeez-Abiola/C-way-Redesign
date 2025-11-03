@@ -7,7 +7,7 @@ const Snacks = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/snacks1.jpg" alt="Snacks" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/snacks1.jpg" alt="Snacks" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -98,7 +98,7 @@ const Snacks = () => {
               className="relative"
             >
               <div className="border border-gray-200 overflow-hidden">
-                <img src="/src/images/snacks1.jpg" alt="Wellcome Snacks" className="w-full h-[420px] object-cover" />
+                <img src="/images/snacks1.jpg" alt="Wellcome Snacks" className="w-full h-[420px] object-cover" />
               </div>
             </motion.div>
           </div>

@@ -25,7 +25,7 @@ const AboutUs = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/cway-team.jpg" alt="About" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/cway-team.jpg" alt="About" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1

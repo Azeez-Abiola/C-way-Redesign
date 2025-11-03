@@ -7,7 +7,7 @@ const Affiliates = () => {
     <div className="pt-20">
       {/* Hero with image */}
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/cway-building.jpg" alt="Affiliates" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/cway-building.jpg" alt="Affiliates" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
@@ -81,8 +81,8 @@ const Affiliates = () => {
             </div>
 
             <div className="grid gap-4">
-              <img src="/src/images/cway-industry.jpg" alt="Pakway Industry" className="w-full h-64 object-cover border border-gray-200" />
-              <img src="/src/images/cway-building.jpg" alt="CWAY Facility" className="w-full h-64 object-cover border border-gray-200" />
+              <img src="/images/cway-industry.jpg" alt="Pakway Industry" className="w-full h-64 object-cover border border-gray-200" />
+              <img src="/images/cway-building.jpg" alt="CWAY Facility" className="w-full h-64 object-cover border border-gray-200" />
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ const Affiliates = () => {
               <p className="text-gray-700 mb-4">Explore our dairy operations and ongoing farm projects.</p>
               <Link to="/dairy" className="btn-primary">View Dairy</Link>
             </div>
-            <img src="/src/images/beverages2.jpg" alt="Dairy" className="w-full h-56 object-cover border border-gray-200" />
+            <img src="/images/beverages2.jpg" alt="Dairy" className="w-full h-56 object-cover border border-gray-200" />
           </div>
         </div>
       </section>

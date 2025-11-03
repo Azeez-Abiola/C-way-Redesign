@@ -31,9 +31,9 @@ const MissionVisionValues = () => {
   ]
 
   const heroImages = [
-    '/src/images/cway-reception.jpg',
-    '/src/images/cway-headquarters.jpg',
-    '/src/images/Headquarters1.jpg'
+    '/images/cway-reception.jpg',
+    '/images/cway-headquarters.jpg',
+    '/images/Headquarters1.jpg'
   ]
 
   const [activeIdx, setActiveIdx] = useState(0)

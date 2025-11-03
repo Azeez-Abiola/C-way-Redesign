@@ -64,7 +64,7 @@ const WhoWeAre = () => {
     <div className="pt-20">
       {/* Hero Section with Image */}
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/cway-reception.jpg" alt="CWAY Reception" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/cway-reception.jpg" alt="CWAY Reception" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -85,7 +85,7 @@ const WhoWeAre = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="border border-gray-200 overflow-hidden">
-                <img src="/src/images/cway-industry.jpg" alt="Industrial Operations" className="w-full h-[420px] object-cover" />
+                <img src="/images/cway-industry.jpg" alt="Industrial Operations" className="w-full h-[420px] object-cover" />
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4 font-display">Operational Footprint</h3>
@@ -114,14 +114,14 @@ const WhoWeAre = () => {
                 <p className="text-lg text-gray-700 mb-0 leading-relaxed">Therefore, for these reasons he sacrificed his comfort and time and ventured to Nigeria where he committed his limited resources alongside his strong ambition, hard work and human resource management skills to start up a small commercial business model which fortunately, over time, successfully grew into a multinational investment today.</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 overflow-hidden">
-                <img src="/src/images/about1.jpg" alt="About CWAY 1" className="w-full h-[360px] object-cover" />
+                <img src="/images/about1.jpg" alt="About CWAY 1" className="w-full h-[360px] object-cover" />
               </motion.div>
             </div>
 
             {/* Row 2 */}
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1 border border-gray-200 overflow-hidden">
-                <img src="/src/images/about2.jpg" alt="About CWAY 2" className="w-full h-[360px] object-cover" />
+                <img src="/images/about2.jpg" alt="About CWAY 2" className="w-full h-[360px] object-cover" />
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Who we are</h3>
@@ -140,14 +140,14 @@ const WhoWeAre = () => {
                 <p className="text-lg text-gray-700 leading-relaxed">Our desire is becoming a global premium brand; global regulatory standards are key reference guides in our productions, consistent innovations and craftsmanship skills—adopting cutting‑edge technologies, high‑quality food‑grade stainless production equipment, stringent supply chain standards on premium imports and promoting total quality management across affiliates now certified ISO 22000 – Food Safety Management System.</p>
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 overflow-hidden">
-                <img src="/src/images/about3.jpg" alt="About CWAY 3" className="w-full h-[360px] object-cover" />
+                <img src="/images/about3.jpg" alt="About CWAY 3" className="w-full h-[360px] object-cover" />
               </motion.div>
             </div>
 
             {/* Row 4 */}
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1 border border-gray-200 overflow-hidden">
-                <img src="/src/images/about4.jpg" alt="About CWAY 4" className="w-full h-[360px] object-cover" />
+                <img src="/images/about4.jpg" alt="About CWAY 4" className="w-full h-[360px] object-cover" />
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Drinking Water & Beverages</h3>
@@ -175,7 +175,7 @@ const WhoWeAre = () => {
                 </div>
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 overflow-hidden">
-                <img src="/src/images/cway-headquarters.jpg" alt="Headquarters" className="w-full h-[360px] object-cover" />
+                <img src="/images/cway-headquarters.jpg" alt="Headquarters" className="w-full h-[360px] object-cover" />
               </motion.div>
             </div>
           </motion.div>
@@ -191,12 +191,12 @@ const WhoWeAre = () => {
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              '/src/images/cway-reception.jpg',
-              '/src/images/cway-industry.jpg',
-              '/src/images/cway-building.jpg',
-              '/src/images/cway-headquarters.jpg',
-              '/src/images/Headquarters1.jpg',
-              '/src/images/cway-team.jpg'
+              '/images/cway-reception.jpg',
+              '/images/cway-industry.jpg',
+              '/images/cway-building.jpg',
+              '/images/cway-headquarters.jpg',
+              '/images/Headquarters1.jpg',
+              '/images/cway-team.jpg'
             ].map((src) => (
               <motion.div key={src} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="aspect-[4/3] overflow-hidden border border-gray-200">
                 <img src={src} alt="CWAY" className="w-full h-full object-cover" />
@@ -212,14 +212,14 @@ const WhoWeAre = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }}>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="/src/images/cway-building.jpg" alt="Corporate Building" className="w-full h-[420px] object-cover border border-gray-200" />
+              <img src="/images/cway-building.jpg" alt="Corporate Building" className="w-full h-[420px] object-cover border border-gray-200" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h3 className="text-3xl font-bold text-gray-900 mb-4 font-display">Global Infrastructure</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">Our investments span modern facilities with advanced manufacturing lines across multiple countries, enabling consistent quality and scale.</p>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/src/images/cway-headquarters.jpg" alt="Headquarters" className="w-full h-40 object-cover border border-gray-200" />
-                <img src="/src/images/Headquarters1.jpg" alt="HQ Exterior" className="w-full h-40 object-cover border border-gray-200" />
+                <img src="/images/cway-headquarters.jpg" alt="Headquarters" className="w-full h-40 object-cover border border-gray-200" />
+                <img src="/images/Headquarters1.jpg" alt="HQ Exterior" className="w-full h-40 object-cover border border-gray-200" />
               </div>
             </motion.div>
           </div>
@@ -247,7 +247,7 @@ const WhoWeAre = () => {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="/src/images/cway-team.jpg" alt="CWAY Team" className="w-full h-[420px] object-cover border border-gray-200" />
+              <img src="/images/cway-team.jpg" alt="CWAY Team" className="w-full h-[420px] object-cover border border-gray-200" />
             </motion.div>
           </div>
           </motion.div>

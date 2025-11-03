@@ -27,7 +27,7 @@ const PackagingSolutions = () => {
   return (
     <div className="pt-20">
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/cway-industry.jpg" alt="Packaging" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/cway-industry.jpg" alt="Packaging" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -74,10 +74,10 @@ const PackagingSolutions = () => {
 
             {/* Mixed Images beside content */}
             <div className="grid gap-4">
-              <img src="/src/images/cway-industry.jpg" alt="Factory" className="w-full h-64 object-cover border border-gray-200" />
+              <img src="/images/cway-industry.jpg" alt="Factory" className="w-full h-64 object-cover border border-gray-200" />
               <div className="grid grid-cols-2 gap-4">
-                <img src="/src/images/cway-building.jpg" alt="Building" className="w-full h-40 object-cover border border-gray-200" />
-                <img src="/src/images/Headquarters1.jpg" alt="HQ" className="w-full h-40 object-cover border border-gray-200" />
+                <img src="/images/cway-building.jpg" alt="Building" className="w-full h-40 object-cover border border-gray-200" />
+                <img src="/images/Headquarters1.jpg" alt="HQ" className="w-full h-40 object-cover border border-gray-200" />
               </div>
             </div>
           </div>
@@ -132,12 +132,12 @@ const PackagingSolutions = () => {
           <h3 className="text-3xl font-bold text-gray-900 mb-8 font-display">Packaging Gallery</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[ 
-              '/src/images/cway-industry.jpg',
-              '/src/images/truck.jpg',
-              '/src/images/cway-building.jpg',
-              '/src/images/Headquarters1.jpg',
-              '/src/images/cway-headquarters.jpg',
-              '/src/images/beverage4.jpg'
+              '/images/cway-industry.jpg',
+              '/images/truck.jpg',
+              '/images/cway-building.jpg',
+              '/images/Headquarters1.jpg',
+              '/images/cway-headquarters.jpg',
+              '/images/beverage4.jpg'
             ].map((src) => (
               <div key={src} className="aspect-[4/3] overflow-hidden border border-gray-200">
                 <img src={src} alt="Packaging" className="w-full h-full object-cover" />

@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 
 const WaterDispensers = () => {
   const featured = [
-    { name: 'ARCTIC 1B', img: '/src/images/dispenser2.png' },
-    { name: 'RUBY 4F', img: '/src/images/dispenser3.png' },
-    { name: 'EXECUTIVE 5F', img: '/src/images/main-dispenser.jpg' }
+    { name: 'ARCTIC 1B', img: '/images/dispenser2.png' },
+    { name: 'RUBY 4F', img: '/images/dispenser3.png' },
+    { name: 'EXECUTIVE 5F', img: '/images/main-dispenser.jpg' }
   ]
 
   const otherModels = ['EXECUTIVE 2F','RUBY 2S','EXECUTIVE 1C','EXECUTIVE 3S','RUBY 2F','RUBY 3F']
 
-  const allDispenserImages = ['/src/images/main-dispenser.jpg', '/src/images/dispenser2.png', '/src/images/dispenser3.png']
+  const allDispenserImages = ['/images/main-dispenser.jpg', '/images/dispenser2.png', '/images/dispenser3.png']
   const [heroIdx, setHeroIdx] = useState(0)
   useEffect(() => {
     const id = setInterval(() => setHeroIdx(p => (p + 1) % allDispenserImages.length), 4500)
@@ -105,7 +105,7 @@ const WaterDispensers = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 overflow-hidden">
-              <img src="/src/images/dispenser3.png" alt="Dispenser Cleaning Service" className="w-full h-[420px] object-cover" />
+              <img src="/images/dispenser3.png" alt="Dispenser Cleaning Service" className="w-full h-[420px] object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-display">DISPENSER CLEANING AND DISINFECTING SERVICE.</h2>

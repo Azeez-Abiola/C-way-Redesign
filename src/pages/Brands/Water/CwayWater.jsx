@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const CwayWater = () => {
-  const waterImages = ['/src/images/cway-water-image to use1.png', '/src/images/cway-water-image to use2.png', '/src/images/cway-water.jpg', '/src/images/cway-water2.jpg', '/src/images/cway-water3.jpg']
+  const waterImages = ['/images/cway-water-image to use1.png', '/images/cway-water-image to use2.png', '/images/cway-water.jpg', '/images/cway-water2.jpg', '/images/cway-water3.jpg']
   const [heroIdx, setHeroIdx] = useState(0)
   useEffect(() => {
     const id = setInterval(() => setHeroIdx(p => (p + 1) % waterImages.length), 4500)
@@ -45,7 +45,7 @@ const CwayWater = () => {
               <p className="text-gray-700">Regular PET bottles.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4">
-              <img src="/src/images/cway-water-image to use1.png" alt="CWAY Dispenser Water" className="w-full h-[360px] object-contain" />
+              <img src="/images/cway-water-image to use1.png" alt="CWAY Dispenser Water" className="w-full h-[360px] object-contain" />
             </motion.div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const CwayWater = () => {
               <p className="text-gray-700">Ideal table water for every party and event.</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2 border border-gray-200 bg-white p-4">
-              <img src="/src/images/cway-water-image to use2.png" alt="CWAY Table Water" className="w-full h-[360px] object-contain" />
+              <img src="/images/cway-water-image to use2.png" alt="CWAY Table Water" className="w-full h-[360px] object-contain" />
             </motion.div>
           </div>
         </div>

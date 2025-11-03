@@ -49,7 +49,7 @@ const Water = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative text-white py-32 overflow-hidden">
-        <img src="/src/images/water-capacity1.jpg" alt="Water" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/water-capacity1.jpg" alt="Water" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gray-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -99,7 +99,7 @@ const Water = () => {
                 </div>
                 <div className="flex-1">
                   <div className="rounded-3xl overflow-hidden border border-gray-200">
-                    <img src={index === 0 ? '/src/images/water-capcity2.jpg' : '/src/images/water-capacity1.jpg'} alt={product.name} className="w-full h-full object-cover" />
+                    <img src={index === 0 ? '/images/water-capcity2.jpg' : '/images/water-capacity1.jpg'} alt={product.name} className="w-full h-full object-cover" />
                   </div>
                 </div>
               </motion.div>
