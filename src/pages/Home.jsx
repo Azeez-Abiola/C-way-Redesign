@@ -101,7 +101,13 @@ const Home = () => {
   return (
     <div className="overflow-hidden bg-white">
       {/* Hero Section with Background Slider */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <motion.section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
         {/* Background Images with Overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {heroImages.map((src, idx) => (
@@ -120,8 +126,9 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white font-display tracking-tight">
               CWAY Group
@@ -147,10 +154,16 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Stats Section - Clean and Minimal */}
-      <section className="py-24 bg-white border-b border-gray-200">
+      <motion.section 
+        className="py-24 bg-white border-b border-gray-200"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
@@ -158,8 +171,8 @@ const Home = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center"
               >
                 <stat.icon className="text-3xl text-gray-400 mb-4 mx-auto" />
@@ -171,15 +184,22 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Features Section with Real Images */}
-      <section className="py-24 bg-white">
+      <motion.section 
+        className="py-24 bg-white"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
             className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-display tracking-tight">
@@ -196,17 +216,17 @@ const Home = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ delay: index * 0.15, duration: 0.5 }}
                 className="group bg-white border border-gray-200 hover:border-gray-300 transition-all duration-300"
               >
-                <div className="relative h-64 overflow-hidden bg-gray-100">
+                <div className={`relative h-64 overflow-hidden bg-white flex items-center justify-center ${index === 0 ? 'p-4' : ''}`}>
                   <img 
                     src={feature.image} 
                     alt={feature.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className={`${index === 0 ? 'w-full h-full object-contain' : 'w-full h-full object-cover'} group-hover:scale-105 transition-transform duration-500`}
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>
+                  {index !== 0 && <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors"></div>}
                 </div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
@@ -226,16 +246,23 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Global Presence Section - Clean Layout */}
-      <section className="py-24 bg-gray-50">
+      <motion.section 
+        className="py-24 bg-gray-50"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-display tracking-tight">
                 Global Presence
@@ -262,9 +289,10 @@ const Home = () => {
               </Link>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
               <div className="bg-white border border-gray-200 p-12">
@@ -290,15 +318,22 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Company Commitment Section - Professional */}
-      <section className="py-24 bg-gray-900 text-white">
+      <motion.section 
+        className="py-24 bg-gray-900 text-white"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-12 font-display tracking-tight">
               Company Commitment
@@ -325,7 +360,7 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
     </div>
   )
 }

@@ -97,8 +97,8 @@ const Snacks = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="border border-gray-200 overflow-hidden">
-                <img src="/images/snacks1.jpg" alt="Wellcome Snacks" className="w-full h-[420px] object-cover" />
+              <div className="border border-gray-200 overflow-hidden image-flip-container">
+                <img src="/images/snacks1.jpg" alt="Wellcome Snacks" className="w-full h-[420px] object-cover image-flip" />
               </div>
             </motion.div>
           </div>

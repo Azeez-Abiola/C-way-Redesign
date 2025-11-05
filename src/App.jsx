@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import WhoWeAre from './pages/AboutUs/WhoWeAre'
@@ -32,6 +33,7 @@ import FAQs from './pages/ContactUs/FAQs'
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">

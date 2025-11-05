@@ -61,8 +61,8 @@ const WaterDispensers = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="border border-gray-200 p-6 hover:border-gray-300 transition-colors"
               >
-                <div className="aspect-[4/3] bg-gray-100 overflow-hidden mb-4">
-                  <img src={img} alt={name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <div className="aspect-[4/3] bg-gray-100 overflow-hidden mb-4 image-flip-container">
+                  <img src={img} alt={name} className="w-full h-full object-cover image-flip" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
               </motion.div>
@@ -92,8 +92,8 @@ const WaterDispensers = () => {
               transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
             >
               {[...featured.map(f => f.img), ...featured.map(f => f.img)].map((img, i) => (
-                <div key={i} className="min-w-[320px] h-[240px] overflow-hidden">
-                  <img src={img} alt="Dispenser" className="w-full h-full object-cover" />
+                <div key={i} className="min-w-[320px] h-[240px] overflow-hidden image-flip-container">
+                  <img src={img} alt="Dispenser" className="w-full h-full object-cover image-flip" />
                 </div>
               ))}
             </motion.div>
@@ -104,8 +104,8 @@ const WaterDispensers = () => {
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 overflow-hidden">
-              <img src="/images/dispenser3.png" alt="Dispenser Cleaning Service" className="w-full h-[420px] object-cover" />
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 overflow-hidden image-flip-container">
+              <img src="/images/dispenser3.png" alt="Dispenser Cleaning Service" className="w-full h-[420px] object-cover image-flip" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-display">DISPENSER CLEANING AND DISINFECTING SERVICE.</h2>

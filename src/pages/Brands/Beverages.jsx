@@ -196,8 +196,8 @@ const Beverages = () => {
               transition={{ repeat: Infinity, duration: 18, ease: 'linear' }}
             >
               {[...beverageImages, ...beverageImages].map((src, i) => (
-                <div key={i} className="min-w-[420px] h-[280px] overflow-hidden">
-                  <img src={src} alt="Beverage" className="w-full h-full object-cover" />
+                <div key={i} className="min-w-[420px] h-[280px] overflow-hidden image-flip-container">
+                  <img src={src} alt="Beverage" className="w-full h-full object-cover image-flip" />
                 </div>
               ))}
             </motion.div>

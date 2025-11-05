@@ -45,8 +45,8 @@ const PrimeWater = () => {
               <h3 className="text-xl font-semibold text-gray-900 mt-4">Packaging</h3>
               <p className="text-gray-700">Aesthetic PC bottles.</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4">
-              <img src="/images/cwayprime-water-image to use1.jpg" alt="PRIME Refill" className="w-full h-[360px] object-contain" />
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4 image-flip-container">
+              <img src="/images/cwayprime-water-image to use1.jpg" alt="PRIME Refill" className="w-full h-[360px] object-contain image-flip" />
             </motion.div>
           </div>
         </div>
@@ -64,8 +64,8 @@ const PrimeWater = () => {
               transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
             >
               {[...primeImages, ...primeImages].map((img, i) => (
-                <div key={i} className="min-w-[420px] h-[280px] overflow-hidden">
-                  <img src={img} alt="PRIME Water" className="w-full h-full object-cover" />
+                <div key={i} className="min-w-[420px] h-[280px] overflow-hidden bg-white flex items-center justify-center p-4 image-flip-container">
+                  <img src={img} alt="PRIME Water" className="w-full h-full object-contain image-flip" />
                 </div>
               ))}
             </motion.div>
@@ -83,8 +83,8 @@ const PrimeWater = () => {
               <h4 className="text-xl font-semibold text-gray-900 mt-2">Packaging</h4>
               <p className="text-gray-700">Available in packs of 12 bottles.</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4">
-              <img src="/images/cwayprime-water-image to use2.png" alt="Prime Table Water" className="w-full h-[360px] object-contain" />
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4 image-flip-container">
+              <img src="/images/cwayprime-water-image to use2.png" alt="Prime Table Water" className="w-full h-[360px] object-contain image-flip" />
             </motion.div>
           </div>
         </div>
@@ -93,8 +93,8 @@ const PrimeWater = () => {
       <section className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4 order-1 lg:order-2">
-              <img src="/images/cwayprime-water-image to use3.png" alt="Prime Range" className="w-full h-[360px] object-contain" />
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4 order-1 lg:order-2 image-flip-container">
+              <img src="/images/cwayprime-water-image to use3.png" alt="Prime Range" className="w-full h-[360px] object-contain image-flip" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">Choose the Water You Can Trust</h3>

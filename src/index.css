@@ -37,6 +37,19 @@
   .text-gradient {
     @apply text-gray-900;
   }
+
+  /* Image tilt effect for brands */
+  .image-flip-container {
+    overflow: hidden;
+  }
+
+  .image-flip {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .image-flip-container:hover .image-flip {
+    transform: rotate(-3deg) scale(1.05);
+  }
 }
 
 /* Smooth scrolling */

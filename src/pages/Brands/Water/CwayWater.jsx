@@ -44,8 +44,8 @@ const CwayWater = () => {
               <h3 className="text-xl font-semibold text-gray-900 mt-4">Packaging</h3>
               <p className="text-gray-700">Regular PET bottles.</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4">
-              <img src="/images/cway-water-image to use1.png" alt="CWAY Dispenser Water" className="w-full h-[360px] object-contain" />
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="border border-gray-200 bg-white p-4 image-flip-container">
+              <img src="/images/cway-water-image to use1.png" alt="CWAY Dispenser Water" className="w-full h-[360px] object-contain image-flip" />
             </motion.div>
           </div>
         </div>
@@ -63,8 +63,8 @@ const CwayWater = () => {
               transition={{ repeat: Infinity, duration: 25, ease: 'linear' }}
             >
               {[...waterImages.slice(0, 3), ...waterImages.slice(0, 3)].map((img, i) => (
-                <div key={i} className="min-w-[420px] h-[280px] overflow-hidden">
-                  <img src={img} alt="CWAY Water" className="w-full h-full object-cover" />
+                <div key={i} className="min-w-[420px] h-[280px] overflow-hidden bg-white flex items-center justify-center p-4 image-flip-container">
+                  <img src={img} alt="CWAY Water" className="w-full h-full object-contain image-flip" />
                 </div>
               ))}
             </motion.div>
@@ -83,8 +83,8 @@ const CwayWater = () => {
               <h4 className="text-xl font-semibold text-gray-900 mt-4">Slogan</h4>
               <p className="text-gray-700">Ideal table water for every party and event.</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2 border border-gray-200 bg-white p-4">
-              <img src="/images/cway-water-image to use2.png" alt="CWAY Table Water" className="w-full h-[360px] object-contain" />
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2 border border-gray-200 bg-white p-4 image-flip-container">
+              <img src="/images/cway-water-image to use2.png" alt="CWAY Table Water" className="w-full h-[360px] object-contain image-flip" />
             </motion.div>
           </div>
         </div>

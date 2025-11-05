@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
   FaDroplet, 
@@ -10,6 +10,43 @@ import {
 } from 'react-icons/fa6'
 
 const WhoWeAre = () => {
+  const useInViewHook = (ref) => {
+    const [inView, setInView] = useState(false)
+    useEffect(() => {
+      if (!ref.current) return
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setInView(true)
+        })
+      }, { threshold: 0.4 })
+      obs.observe(ref.current)
+      return () => obs.disconnect()
+    }, [])
+    return inView
+  }
+
+  const CountUp = ({ to, duration = 1200, suffix = '' }) => {
+    const ref = useRef(null)
+    const inView = useInViewHook(ref)
+    const [value, setValue] = useState(0)
+    useEffect(() => {
+      if (!inView) return
+      let start = 0
+      let startTs
+      const animate = (ts) => {
+        if (!startTs) startTs = ts
+        const progress = Math.min((ts - startTs) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        const current = Math.floor(start + (to - start) * eased)
+        setValue(current)
+        if (progress < 1) requestAnimationFrame(animate)
+      }
+      const id = requestAnimationFrame(animate)
+      return () => cancelAnimationFrame(id)
+    }, [inView, to, duration])
+    return <span ref={ref}>{value}{suffix}</span>
+  }
+
   const milestones = [
     {
       year: '2000',
@@ -198,8 +235,20 @@ const WhoWeAre = () => {
               '/images/Headquarters1.jpg',
               '/images/cway-team.jpg'
             ].map((src) => (
-              <motion.div key={src} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="aspect-[4/3] overflow-hidden border border-gray-200">
-                <img src={src} alt="CWAY" className="w-full h-full object-cover" />
+              <motion.div 
+                key={src} 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: false, amount: 0.3 }}
+                className="aspect-[4/3] overflow-hidden border border-gray-200 group cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img 
+                  src={src} 
+                  alt="CWAY" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                />
               </motion.div>
             ))}
           </div>
@@ -236,14 +285,26 @@ const WhoWeAre = () => {
               <h3 className="text-3xl font-bold text-gray-900 mb-4 font-display">People and Culture</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">Our talent-first culture emphasizes best practices, growth, and safety. We invest in people, processes, and technology to deliver excellence.</p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="border border-gray-200 p-6">
-                  <div className="text-3xl font-bold text-gray-900">24+</div>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ delay: 0.2 }}
+                  className="border border-gray-200 p-6 hover:border-gray-900 transition-colors"
+                >
+                  <div className="text-3xl font-bold text-gray-900"><CountUp to={24} suffix="+" /></div>
                   <div className="text-gray-600">Years in Operation</div>
-                </div>
-                <div className="border border-gray-200 p-6">
-                  <div className="text-3xl font-bold text-gray-900">15+</div>
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ delay: 0.3 }}
+                  className="border border-gray-200 p-6 hover:border-gray-900 transition-colors"
+                >
+                  <div className="text-3xl font-bold text-gray-900"><CountUp to={15} suffix="+" /></div>
                   <div className="text-gray-600">Product Categories</div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -274,15 +335,21 @@ const WhoWeAre = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ delay: index * 0.1 }}
-                className="card text-center border border-gray-200 rounded-none"
+                className="card text-center border border-gray-200 rounded-none group cursor-pointer"
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
               >
-                <div className="w-16 h-16 bg-gray-900 flex items-center justify-center mx-auto mb-4">
+                <motion.div 
+                  className="w-16 h-16 bg-gray-900 flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-800 transition-colors"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <area.icon className="text-3xl text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{area.title}</h3>
-                <p className="text-gray-600">{area.description}</p>
+                </motion.div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">{area.title}</h3>
+                <p className="text-gray-600 group-hover:text-gray-700 transition-colors">{area.description}</p>
               </motion.div>
             ))}
           </div>
